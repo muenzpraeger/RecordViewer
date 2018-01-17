@@ -58,15 +58,10 @@ For more information, see these [Creating a Self-Signed SSL Certificate](https:/
 All of the instructions below assume that you are within the root of the project directory.
 
 1. Install the [Heroku CLI](https://toolbelt.heroku.com/)
-1. Log into Heroku through the command line
+1. Log into the Heroku container registry through the command line
 
     ```sh
-    heroku login
-    ```
-1. The Docker add-on must be installed
-
-    ```sh
-    heroku plugins:install heroku-docker
+    heroku container:login
     ```
 1. The Heroku application must be created
 
@@ -76,7 +71,7 @@ All of the instructions below assume that you are within the root of the project
 1. Deploy the application
 
     ```sh
-    heroku docker:release
+    heroku container:push web
     ```
 
 ### (Optional) Set the Default Login URL and Consumer Key
